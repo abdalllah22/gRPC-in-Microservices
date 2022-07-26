@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+message ServiceTwoRequest {
+    string ServiceTwoName = 1;
+}
+
+message ServiceTwoResponse {
+    string ServiceTwoRes = 1;
+}
+
+
+service ServiceTwo {
+      rpc CallServiceTwo (ServiceTwoRequest) returns (ServiceTwoResponse);
+    }
